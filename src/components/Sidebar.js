@@ -3,7 +3,7 @@ import { Drawer, List, Divider } from "@material-ui/core";
 // import InboxIcon from "@material-ui/icons/MoveToInbox";
 
 import PersonIcon from "@material-ui/icons/Person";
-// import WorkIcon from "@material-ui/icons/Work";
+import WorkIcon from "@material-ui/icons/Work";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import SchoolIcon from "@material-ui/icons/School";
 import EmailIcon from "@material-ui/icons/Email";
@@ -120,6 +120,12 @@ const Sidebar = ({ open, handleDrawerToggle, variant }) => {
               title={"Projects"}
               icon={
                 <AccountTreeIcon className="projectsIcon" fontSize={"large"} />
+              }
+            />
+            <SidebarItem
+              title={"Experience"}
+              icon={
+                <WorkIcon className="experienceIcon" fontSize={"large"} />
               }
             />
             <SidebarItem

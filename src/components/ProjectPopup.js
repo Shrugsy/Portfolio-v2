@@ -7,40 +7,29 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  Button,
   Typography
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import GitHubIcon from "@material-ui/icons/GitHub";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 const useStyles = makeStyles({
     card: {
-        // width: '1000px',
-        // width: 'auto',
       background: "#282828",
       color: "rgb(175, 175, 175)"
     },
     media: {
-        // backgroundColor: 'white',
         maxHeight: '70vh',
-        // width: 'auto',
-        // height: '500px',
-        // width: 'auto',
-        // width: '1000px',
       objectFit: "contain",
       color: "rgb(175, 175, 175)"
     },
     leftImgOverlay: {
         position: 'absolute',
         color: 'black',
-        // backgroundColor: 'blue',
         top: '0',
         height: '100%',
         width: '50%',
-        // opacity: '0.1'
         '&:hover svg': {
             opacity: 1,
             transform: 'scale(2) translateY(-25%)',
@@ -50,12 +39,10 @@ const useStyles = makeStyles({
     rightImgOverlay: {
         position: 'absolute',
         color: 'black',
-        // backgroundColor: 'red',
         top: '0',
         right: '0',
         height: '100%',
         width: '50%',
-        // opacity: '0.1'
         '&:hover svg': {
             opacity: 1,
             left: '95%',
@@ -93,7 +80,7 @@ const ProjectPopup = ({
   images,
   tech,
   liveButton,
-  linkSource
+  sourceButton
 }) => {
     let maxCtr = images.length;
     const classes = useStyles();
@@ -123,7 +110,6 @@ const ProjectPopup = ({
 
   return (
     <Dialog open={open} onClose={handleClose}
-    // fullWidth='lg'
     maxWidth='md'
     >
       <Card className={classes.card}>
@@ -151,15 +137,7 @@ const ProjectPopup = ({
 
         <CardActions>
           {liveButton}
-          <Button
-            href={linkSource}
-            variant="contained"
-            size="small"
-            color="secondary"
-            startIcon={<GitHubIcon />}
-          >
-            View Source
-          </Button>
+          {sourceButton}
         </CardActions>
       </Card>
     </Dialog>

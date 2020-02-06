@@ -20,6 +20,7 @@ const useStyles = makeStyles( theme => ({
     width: "60px",
     background: "#282828",
     borderRadius: "50%",
+    boxShadow: '2px 2px 8px black',
     marginRight: "10px",
     transform: "translateY(-25%)",
     "& svg": {

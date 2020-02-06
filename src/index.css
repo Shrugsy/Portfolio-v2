@@ -165,11 +165,21 @@ code {
   .landingContainer {
     font-size: 4rem;
   }
+
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .landingContainer {
     font-size: 5rem;
+  }
+  /* .container {
+    width: 80%;
+  } */
+}
+
+@media (min-width: 2200px) {
+  .container {
+    width: 60%;
   }
 }

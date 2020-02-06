@@ -26,8 +26,8 @@ const Banner = ({ title, color }) => {
       textTransform: "uppercase",
       fontSize: "3rem",
       margin: "0 0 0 48px",
-      padding: "6px 0 6px 0",
-      fontWeight: "normal"
+      padding: "24px 0 24px 0",
+      fontWeight: "300"
     }
   }));
 

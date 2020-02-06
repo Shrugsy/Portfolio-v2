@@ -31,6 +31,15 @@ import portfolio3 from "../images/projects/portfolio3.jpg";
 import portfolio4 from "../images/projects/portfolio4.jpg";
 import portfolio5 from "../images/projects/portfolio5.jpg";
 
+import taskTimer1 from "../images/projects/taskTimer1.png";
+
+import autoCADAddons1 from "../images/projects/autoCADAddons1.png";
+import autoCADAddons2 from "../images/projects/autoCADAddons2.png";
+import autoCADAddons3 from "../images/projects/autoCADAddons3.png";
+import autoCADAddons4 from "../images/projects/autoCADAddons4.png";
+import autoCADAddons5 from "../images/projects/autoCADAddons5.png";
+import autoCADAddons6 from "../images/projects/autoCADAddons6.png";
+
 
 
 export default function Projects() {
@@ -120,6 +129,22 @@ export default function Projects() {
               tech={["React", "HTML", "CSS", "JS"]}
               linkLive="https://elastic-villani-6d8371.netlify.com/"
               linkSource="https://github.com/Shrugsy/Portfolio-v1"
+            />
+          </Grid>
+          <Grid item xs={12} md={6} xl={4}>
+            <Project
+              images={[taskTimer1]}
+              title="Task Timer"
+              description="Desktop app developed for drafting team at Power Line Design to integrate with existing personnel status maintenance and record keeping content management systems via ajax calls."
+              tech={["Electron", "HTML", "CSS", "JS"]}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} xl={4}>
+            <Project
+              images={[autoCADAddons1, autoCADAddons2, autoCADAddons3, autoCADAddons4, autoCADAddons5, autoCADAddons6]}
+              title="AutoCAD script addon suite"
+              description="AutoLISP script suite developed for drafting team at Power Line Design to provide automation scripts and interface with supply authority provided documents."
+              tech={["AutoLISP, Visual Basic for Applications"]}
             />
           </Grid>
         </Grid>

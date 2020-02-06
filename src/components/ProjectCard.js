@@ -7,18 +7,16 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  Button,
   Typography
 } from "@material-ui/core";
-
-import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles({
   card: {
     //   maxWidth: 345,
     minWidth: 300,
     background: "#282828",
-    color: "rgb(175, 175, 175)"
+    color: "rgb(175, 175, 175)",
+    boxShadow: '2px 2px 8px black'
   },
   media: {
     height: 200,
@@ -33,7 +31,7 @@ const ProjectCard = ({
   images,
   tech,
   liveButton,
-  linkSource,
+  sourceButton,
   handleClickOpen
 }) => {
   const classes = useStyles();
@@ -60,15 +58,7 @@ const ProjectCard = ({
       </CardActionArea>
       <CardActions>
         {liveButton}
-        <Button
-          href={linkSource}
-          variant="contained"
-          size="small"
-          color="secondary"
-          startIcon={<GitHubIcon />}
-        >
-          View Source
-        </Button>
+        {sourceButton}
       </CardActions>
     </Card>
   );

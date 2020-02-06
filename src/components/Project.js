@@ -5,6 +5,7 @@ import { Button } from "@material-ui/core";
 
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import CancelIcon from "@material-ui/icons/Cancel";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import ProjectCard from "./ProjectCard";
 import ProjectPopup from "./ProjectPopup";
 
@@ -38,6 +39,7 @@ const Project = ({
     liveButton = (
       <span style={{ backgroundColor: "white" }}>
         <Button
+        style={{color: '#404040'}}
           variant="contained"
           size="small"
           color="primary"
@@ -49,6 +51,26 @@ const Project = ({
       </span>
     );
   }
+
+  let sourceButton = linkSource
+  ? <Button
+    variant="contained"
+    size="small"
+    color="secondary"
+    startIcon={<GitHubIcon />}
+  >
+    View Source
+  </Button>
+  : (<span style={{ backgroundColor: "white" }}><Button
+  style={{color: '#404040'}}
+  variant="contained"
+  size="small"
+  color="secondary"
+  disabled
+  startIcon={<CancelIcon />}
+  >
+    Source code not available
+  </Button></span>)
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -68,7 +90,7 @@ const Project = ({
         images={images}
         tech={tech}
         liveButton={liveButton}
-        linkSource={linkSource}
+        sourceButton={sourceButton}
       />
       <ProjectCard
         title={title}
@@ -76,7 +98,7 @@ const Project = ({
         images={images}
         tech={tech}
         liveButton={liveButton}
-        linkSource={linkSource}
+        sourceButton={sourceButton}
         handleClickOpen={handleClickOpen}
       />
     </React.Fragment>

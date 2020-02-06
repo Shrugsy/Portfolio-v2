@@ -6,6 +6,7 @@ import Education from "./views/Education";
 import Contact from "./views/Contact";
 import Landing from "./views/Landing";
 import Nav from "./components/Nav";
+import Experience from "./views/Experience";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Experience />
         <Education />
         <Contact />
       </div>

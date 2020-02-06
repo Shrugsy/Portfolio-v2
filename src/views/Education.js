@@ -8,7 +8,8 @@ const useStyles = makeStyles({
     //   maxWidth: 345,
     minWidth: '200px',
     background: "#282828",
-    color: "rgb(175, 175, 175)"
+    color: "rgb(175, 175, 175)",
+    boxShadow: '2px 2px 8px black'
   }
 });
 
