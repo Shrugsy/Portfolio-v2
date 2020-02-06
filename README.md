@@ -3,4 +3,6 @@
 Live version: 
 https://colinjoshuafraser.me  
 or  
-https://cjf-portfolio.herokuapp.com/
+https://cjf-portfolio.herokuapp.com/  
+
+Heavily inspired by Andrew Borstein's portfolio: https://github.com/andrewborstein/portfolio
