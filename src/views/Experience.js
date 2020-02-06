@@ -20,8 +20,9 @@ export default function Experience() {
               role="Electrical Design Consultant"
               description="Small electrical Level 3 Accredited Service Provider with projects spanning the entirety of NSW."
               tasks={[
-                "Self-driven development of desktop GUI apps and browser extensions to integrate work processes and improve productivity",
-                "Self-driven development of AutoCAD script addons and VBA scripts to introduce automation software to the workplace",
+                "Solo self-driven development of desktop GUI apps and browser extensions to integrate work processes and improve productivity",
+                "Solo self-driven development of AutoCAD script addons and VBA scripts to introduce automation software to the workplace",
+                "Solo development of Python & Powershell scripts to facilitate the transition of company data restructuring",
                 "Consistent output of Computer Aided Design drafting",
                 "Frequent liaising with clients",
                 "Detailed site visits and data collection (survey data, soil resistivity testing)",
