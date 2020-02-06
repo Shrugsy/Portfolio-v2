@@ -25,7 +25,8 @@ const styles = theme => ({
         textAlign: 'center'
     },
     "& img": {
-      maxHeight: "60px"
+      maxHeight: "60px",
+      margin: '10px'
     }
   },
   listHeading: {
@@ -58,33 +59,32 @@ class Skills extends Component {
               <Grid
                 className={classes.iconGrid}
                 container
-                spacing={1}
               >
-                <Grid item xs={6} sm={4} md={3} lg={1}>
+                <Grid item xs={4} sm={4} md={3} lg={1}>
                   <img src={GitIcon} alt="Git" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={3} lg={1}>
+                <Grid item xs={4} sm={4} md={3} lg={1}>
                   <img src={GitHubIcon} alt="Github" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={3} lg={1}>
+                <Grid item xs={4} sm={4} md={3} lg={1}>
                   <img src={ReactIcon} alt="React" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={3} lg={1}>
+                <Grid item xs={4} sm={4} md={3} lg={1}>
                   <img src={NodeIcon} alt="NodeJS" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={2} lg={1}>
+                <Grid item xs={4} sm={4} md={2} lg={1}>
                   <img src={HTMLIcon} alt="HTML" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={2} lg={1}>
+                <Grid item xs={4} sm={4} md={2} lg={1}>
                   <img src={CSSIcon} alt="CSS" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={2} lg={1}>
+                <Grid item xs={4} sm={4} md={2} lg={1}>
                   <img src={JSIcon} alt="Javascript" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={2} lg={1}>
+                <Grid item xs={4} sm={4} md={2} lg={1}>
                   <img src={BootstrapIcon} alt="Bootstrap" />
                 </Grid>
-                <Grid item xs={6} sm={4} md={2} lg={1}>
+                <Grid item xs={4} sm={4} md={2} lg={1}>
                   <img src={MaterialUIIcon} alt="Material UI" />
                 </Grid>
               </Grid>
