@@ -4,7 +4,7 @@ import ExperienceCard from "../components/ExperienceCard";
 import { Grid } from "@material-ui/core";
 
 import pldLogo from "../images/Logos/pld_logo.png";
-import woolworthsLogo from '../images/Logos/woolworths-5.svg'
+import woolworthsLogo from "../images/Logos/woolworths-5.svg";
 
 export default function Experience() {
   return (
@@ -14,6 +14,7 @@ export default function Experience() {
         <Grid container justify="center">
           <Grid item xs={12} sm={12} md={12} lg={8}>
             <ExperienceCard
+              link="https://powerdesign.com.au/"
               logo={pldLogo}
               company="Power Line Design"
               role="Electrical Design Consultant"
@@ -35,19 +36,20 @@ export default function Experience() {
               durationTo="Oct 2019"
               location="Mittagong, NSW"
             />
-            <ExperienceCard 
-                logo={woolworthsLogo}
-                company="Woolworths"
-                role="Service Cashier"
-                description="Nation wide supermarket chain"
-                tasks={[
-                    "Supervision of fellow staff members",
-                    "Serving customers as well as dealing with customer queries & complains",
-                    "Frequent handling of large sums of cash"
-                ]}
-                durationFrom="2006"
-                durationTo="2017"
-                location="Wagga Wagga & Wollongong"
+            <ExperienceCard
+              link="https://www.woolworths.com.au/"
+              logo={woolworthsLogo}
+              company="Woolworths"
+              role="Service Cashier"
+              description="Nation wide supermarket chain"
+              tasks={[
+                "Supervision of fellow staff members",
+                "Serving customers as well as dealing with customer queries & complains",
+                "Frequent handling of large sums of cash"
+              ]}
+              durationFrom="2006"
+              durationTo="2017"
+              location="Wagga Wagga & Wollongong"
             />
           </Grid>
         </Grid>

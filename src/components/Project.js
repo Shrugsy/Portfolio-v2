@@ -39,7 +39,7 @@ const Project = ({
     liveButton = (
       <span style={{ backgroundColor: "white" }}>
         <Button
-        style={{color: '#404040'}}
+          style={{color: '#404040'}}
           variant="contained"
           size="small"
           color="primary"
