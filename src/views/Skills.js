@@ -122,7 +122,7 @@ class Skills extends Component {
           <p>
             In addition to to the above, I have experience in many other
             technologies including EJS, Python, AutoLisp, Visual Basic For
-            Applications and C.
+            Applications, C and C++.
           </p>
         </div>
       </div>
