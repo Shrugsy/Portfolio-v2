@@ -54,6 +54,7 @@ const Project = ({
 
   let sourceButton = linkSource
   ? <Button
+    href={linkSource}
     variant="contained"
     size="small"
     color="secondary"
