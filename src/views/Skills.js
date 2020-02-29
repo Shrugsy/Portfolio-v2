@@ -100,6 +100,7 @@ class Skills extends Component {
             <h3 className={classes.listHeading}>Front End</h3>
               <ul>
                 <li>React</li>
+                <li>Vue</li>
                 <li>HTML 5</li>
                 <li>CSS 3</li>
                 <li>Vanilla Javascript</li>

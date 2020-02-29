@@ -40,6 +40,11 @@ import autoCADAddons4 from "../images/projects/autoCADAddons4.png";
 import autoCADAddons5 from "../images/projects/autoCADAddons5.png";
 import autoCADAddons6 from "../images/projects/autoCADAddons6.png";
 
+import plotter1 from "../images/projects/plotter1.png";
+import plotter2 from "../images/projects/plotter2.png";
+import plotter3 from "../images/projects/plotter3.png";
+import plotter4 from "../images/projects/plotter4.png";
+import plotter5 from "../images/projects/plotter5.png";
 
 
 export default function Projects() {
@@ -48,6 +53,16 @@ export default function Projects() {
       <Banner title={"Projects"} color={"#4D4AB4"} />
       <div className="container content">
         <Grid container spacing={6}>
+        <Grid item xs={12} md={6} xl={4}>
+            <Project
+              images={[plotter1, plotter2, plotter3, plotter4, plotter5]}
+              title="Vue SVG Plotter project"
+              description="A Vue project implementing a user interface for the SVG plotter functionality."
+              tech={["Vue", "HTML", "CSS", "JS"]}
+              linkLive="https://cjf-plotter.netlify.com/"
+              linkSource="https://github.com/Shrugsy/plotter"
+            />
+          </Grid>
           <Grid item xs={12} md={6} xl={4}>
             <Project
               images={[palette1, palette2, palette3]}
