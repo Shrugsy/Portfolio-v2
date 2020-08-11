@@ -90,7 +90,7 @@ const ProjectPopup = ({
 
     useEffect(() => {
         setImage(images[ctr])
-    }, [ctr])
+    }, [ctr, images])
 
     const handleClickLeftSide = () => {
         if (ctr > 0) {

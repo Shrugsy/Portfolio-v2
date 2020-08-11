@@ -6,7 +6,7 @@ import Education from "./views/Education";
 import Contact from "./views/Contact";
 import Landing from "./views/Landing";
 import Nav from "./components/Nav";
-import Experience from "./views/Experience";
+import Experience from "./views/experience/Experience";
 
 function App() {
   return (

@@ -107,6 +107,7 @@ class Skills extends Component {
                 <li>jQuery</li>
                 <li>Bootstrap</li>
                 <li>Material UI</li>
+                <li>Semantic UI</li>
               </ul>
             </Grid>
             <Grid className={classes.list} item xs={4}>
@@ -115,13 +116,16 @@ class Skills extends Component {
                 <li>Node.js</li>
                 <li>Express</li>
                 <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>Django</li>
+                <li>Python</li>
               </ul>
             </Grid>
           </Grid>
 
           <p>
             In addition to to the above, I have experience in many other
-            technologies including EJS, Python, AutoLisp, Visual Basic For
+            technologies including EJS, AutoLisp, Visual Basic For
             Applications, C and C++.
           </p>
         </div>

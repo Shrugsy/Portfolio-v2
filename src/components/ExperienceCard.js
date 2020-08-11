@@ -1,4 +1,5 @@
 import React from "react";
+import {string, array} from 'prop-types'
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -65,7 +66,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ExperienceCard = ({
+ExperienceCard.propTypes = {
+  link: string.isRequired,
+  logo: string.isRequired,
+  company: string.isRequired,
+  role: string.isRequired,
+  description: string.isRequired,
+  tasks: array.isRequired,
+  durationFrom: string.isRequired,
+  durationTo: string.isRequired,
+  location: string.isRequired,
+}
+
+function ExperienceCard({
   link,
   logo,
   company,
@@ -75,7 +88,7 @@ const ExperienceCard = ({
   durationFrom,
   durationTo,
   location
-}) => {
+}){
   const classes = useStyles();
 
   let taskItems = tasks
@@ -84,10 +97,11 @@ const ExperienceCard = ({
 
   let image, companyTitle;
 
+  let picture = (<img className={classes.logo} src={logo} alt={company} />);
   if (link) {
     image = (
       <a href={link}>
-        <img className={classes.logo} src={logo} alt={company} />
+        {picture}
       </a>
     );
     companyTitle = (
@@ -96,7 +110,7 @@ const ExperienceCard = ({
       </Typography>
     );
   } else {
-    image = <img className={classes.logo} src={logo} alt={company} />;
+    image = picture;
     companyTitle = (
       <Typography className={classes.company} variant="h5" component="h2">
         {company}
