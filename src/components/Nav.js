@@ -7,7 +7,7 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    setMobileOpen(prev => !prev)
   };
 
   return (

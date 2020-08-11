@@ -1,37 +1,43 @@
 import React from "react";
+import { string } from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
-// also take whether app bar is visible?
-const Banner = ({ title, color }) => {
-  const useStyles = makeStyles(theme => ({
-    href: {
-      height: '56px',
-      marginTop: '-56px',
-      [theme.breakpoints.up("sm")]: {
-        height: "64px",
-        marginTop: "-64px"
-      },
-      [theme.breakpoints.up("md")]: {
-        height: "0px",
-        marginTop: "0px"
-      },
+const useStyles = makeStyles((theme) => ({
+  href: {
+    height: "56px",
+    marginTop: "-56px",
+    [theme.breakpoints.up("sm")]: {
+      height: "64px",
+      marginTop: "-64px",
     },
-    bannerStyle: {
-      background: color,
-      width: "100%",
+    [theme.breakpoints.up("md")]: {
+      height: "0px",
+      marginTop: "0px",
     },
-    headingStyle: {
-      width: "90%",
-      color: "#1F1F1F",
-      textTransform: "uppercase",
-      fontSize: "3rem",
-      margin: "0 0 0 48px",
-      padding: "24px 0 24px 0",
-      fontWeight: "300"
-    }
-  }));
+  },
+  bannerStyle: {
+    background: (props) => props.color,
+    width: "100%",
+  },
+  headingStyle: {
+    width: "90%",
+    color: "#1F1F1F",
+    textTransform: "uppercase",
+    fontSize: "3rem",
+    margin: "0 0 0 48px",
+    padding: "24px 0 24px 0",
+    fontWeight: "300",
+  },
+}));
 
-  const classes = useStyles();
+Banner.propTypes = {
+  title: string.isRequired,
+  color: string.isRequired,
+};
+
+// also take whether app bar is visible?
+export default function Banner({ title, color }) {
+  const classes = useStyles({color});
 
   return (
     <React.Fragment>
@@ -41,5 +47,4 @@ const Banner = ({ title, color }) => {
       </div>
     </React.Fragment>
   );
-};
-export default Banner;
+}

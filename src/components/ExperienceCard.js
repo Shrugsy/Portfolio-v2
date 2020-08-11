@@ -1,21 +1,21 @@
 import React from "react";
-import {string, array} from 'prop-types'
+import { string, array } from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   CardContent,
   Typography,
   Box,
-  CardActions
+  CardActions,
 } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     minWidth: 300,
     background: "#282828",
     color: "rgb(175, 175, 175)",
     boxShadow: "2px 2px 8px black",
-    marginBottom: "48px"
+    marginBottom: "48px",
   },
   header: {
     width: "100%",
@@ -24,8 +24,8 @@ const useStyles = makeStyles(theme => ({
     borderBottom: "1px solid #656565",
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
-      alignItems: "center"
-    }
+      alignItems: "center",
+    },
   },
   positionInfo: {
     margin: "0 0 0 15px",
@@ -33,37 +33,40 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
-      alignItems: "center"
-    }
+      alignItems: "center",
+    },
   },
   logo: {
     maxWidth: "100px",
     maxHeight: "100px",
     background: "white",
     padding: "8px",
-    borderRadius: "5%"
+    borderRadius: "5%",
   },
   company: {
-    fontWeight: "300"
+    fontWeight: "300",
   },
   companyLink: {
     textDecoration: "none",
-    color: 'inherit',
+    color: "inherit",
     transition: "0.25s all",
     "&:hover": {
       borderBottom: "3px solid currentColor",
-      padding: 0
-    }
+      padding: 0,
+    },
   },
   role: {
     justifySelf: "flex-end",
-    margin: "5px 0"
+    margin: "5px 0",
+  },
+  dates: {
+    fontStyle: "italic",
   },
   cardFooter: {
     padding: "16px",
     fontSize: "14px",
-    backgroundColor: "#333333"
-  }
+    backgroundColor: "#333333",
+  },
 }));
 
 ExperienceCard.propTypes = {
@@ -76,9 +79,9 @@ ExperienceCard.propTypes = {
   durationFrom: string.isRequired,
   durationTo: string.isRequired,
   location: string.isRequired,
-}
+};
 
-function ExperienceCard({
+export default function ExperienceCard({
   link,
   logo,
   company,
@@ -87,8 +90,8 @@ function ExperienceCard({
   tasks,
   durationFrom,
   durationTo,
-  location
-}){
+  location,
+}) {
   const classes = useStyles();
 
   let taskItems = tasks
@@ -97,15 +100,16 @@ function ExperienceCard({
 
   let image, companyTitle;
 
-  let picture = (<img className={classes.logo} src={logo} alt={company} />);
+  let picture = <img className={classes.logo} src={logo} alt={company} />;
   if (link) {
-    image = (
-      <a href={link}>
-        {picture}
-      </a>
-    );
+    image = <a href={link}>{picture}</a>;
     companyTitle = (
-      <Typography href={link} className={[classes.company, classes.companyLink].join(' ')} variant="h5" component="a">
+      <Typography
+        href={link}
+        className={[classes.company, classes.companyLink].join(" ")}
+        variant="h5"
+        component="a"
+      >
         {company}
       </Typography>
     );
@@ -149,10 +153,12 @@ function ExperienceCard({
         </Typography>
       </CardContent>
       <CardActions className={classes.cardFooter}>
-        {durationFrom} - {durationTo} | {location}
+        <span className={classes.dates}>
+          {durationFrom} - {durationTo}
+        </span>
+        <span> | </span>
+        <span>{location}</span>
       </CardActions>
     </Card>
   );
-};
-
-export default ExperienceCard;
+}

@@ -1,14 +1,11 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { string, array, func } from "prop-types";
 
-import {
-  Card,
-  CardMedia,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  Typography
-} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { Card, CardMedia, CardActionArea } from "@material-ui/core";
+
+import ProjectContent from "./ProjectContent";
+import ProjectActions from "./ProjectActions";
 
 const useStyles = makeStyles({
   card: {
@@ -16,24 +13,34 @@ const useStyles = makeStyles({
     minWidth: 300,
     background: "#282828",
     color: "rgb(175, 175, 175)",
-    boxShadow: '2px 2px 8px black'
+    boxShadow: "2px 2px 8px black",
   },
   media: {
     height: 200,
     objectFit: "cover",
-    color: "rgb(175, 175, 175)"
-  }
+    color: "rgb(175, 175, 175)",
+  },
 });
 
-const ProjectCard = ({
+ProjectCard.propTypes = {
+  title: string.isRequired,
+  description: string.isRequired,
+  images: array.isRequired,
+  tech: array.isRequired,
+  linkLive: string,
+  linkSource: string,
+  handleClickOpen: func.isRequired,
+};
+
+export default function ProjectCard({
   title,
   description,
   images,
   tech,
-  liveButton,
-  sourceButton,
-  handleClickOpen
-}) => {
+  linkLive,
+  linkSource,
+  handleClickOpen,
+}) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
@@ -44,23 +51,9 @@ const ProjectCard = ({
           image={images[0]}
           title={title}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {description}
-          </Typography>
-          <Typography variant="body2" component="p">
-            Technologies used: {tech.join(", ")}
-          </Typography>
-        </CardContent>
+        <ProjectContent title={title} description={description} tech={tech} />
       </CardActionArea>
-      <CardActions>
-        {liveButton}
-        {sourceButton}
-      </CardActions>
+      <ProjectActions linkLive={linkLive} linkSource={linkSource} />
     </Card>
   );
-};
-export default ProjectCard;
+}

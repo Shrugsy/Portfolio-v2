@@ -1,39 +1,38 @@
 import React from "react";
-import { Drawer, List, Divider } from "@material-ui/core";
-// import InboxIcon from "@material-ui/icons/MoveToInbox";
+import { bool, func, string } from "prop-types";
 
+import { Drawer, List, Divider } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
 import WorkIcon from "@material-ui/icons/Work";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import SchoolIcon from "@material-ui/icons/School";
 import EmailIcon from "@material-ui/icons/Email";
 import CodeIcon from "@material-ui/icons/Code";
-
-// import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
-import SidebarItem from "./SidebarItem";
+// import { makeStyles, useTheme } from "@material-ui/core/styles";
 
+import SidebarItem from "./SidebarItem";
 
 const drawerWidth = 200;
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex"
+    display: "flex",
   },
   hide: {
-    display: "none"
+    display: "none",
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
-      flexShrink: 0
-    }
+      flexShrink: 0,
+    },
   },
   drawerPaper: {
     backgroundColor: "#282828",
     // color: 'white',
     color: "rgb(175, 175, 175)",
-    width: drawerWidth
+    width: drawerWidth,
   },
   drawerHeader: {
     // backgroundColor: "#fafafa",
@@ -48,27 +47,33 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     padding: theme.spacing(0, 1),
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
+      duration: theme.transitions.duration.leavingScreen,
     }),
-    marginLeft: -drawerWidth
+    marginLeft: -drawerWidth,
   },
   contentShift: {
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
+      duration: theme.transitions.duration.enteringScreen,
     }),
-    marginLeft: 0
-  }
+    marginLeft: 0,
+  },
 }));
 
-const Sidebar = ({ open, handleDrawerToggle, variant }) => {
+Sidebar.propTypes = {
+  open: bool.isRequired,
+  handleDrawerToggle: func.isRequired,
+  variant: string.isRequired,
+};
+
+function Sidebar({ open, handleDrawerToggle, variant }) {
   const classes = useStyles();
 
   //   const theme = useTheme();
@@ -82,7 +87,7 @@ const Sidebar = ({ open, handleDrawerToggle, variant }) => {
       open={open}
       onClose={handleDrawerToggle}
       classes={{
-        paper: classes.drawerPaper
+        paper: classes.drawerPaper,
       }}
       ModalProps={{ keepMounted: true }}
     >
@@ -107,39 +112,37 @@ const Sidebar = ({ open, handleDrawerToggle, variant }) => {
         </div>
         <Divider />
         <List>
-            <SidebarItem
-              title={"About"}
-              icon={<PersonIcon className="personIcon" fontSize={"large"} />}
-            />
+          <SidebarItem
+            title={"About"}
+            icon={<PersonIcon className="personIcon" fontSize={"large"} />}
+          />
 
-            <SidebarItem
-              title={"Skills"}
-              icon={<CodeIcon className="skillsIcon" fontSize={"large"} />}
-            />
-            <SidebarItem
-              title={"Projects"}
-              icon={
-                <AccountTreeIcon className="projectsIcon" fontSize={"large"} />
-              }
-            />
-            <SidebarItem
-              title={"Experience"}
-              icon={
-                <WorkIcon className="experienceIcon" fontSize={"large"} />
-              }
-            />
-            <SidebarItem
-              title={"Education"}
-              icon={<SchoolIcon className="educationIcon" fontSize={"large"} />}
-            />
-            <SidebarItem
-              title={"Contact"}
-              icon={<EmailIcon className="contactIcon" fontSize={"large"} />}
-            />
+          <SidebarItem
+            title={"Skills"}
+            icon={<CodeIcon className="skillsIcon" fontSize={"large"} />}
+          />
+          <SidebarItem
+            title={"Projects"}
+            icon={
+              <AccountTreeIcon className="projectsIcon" fontSize={"large"} />
+            }
+          />
+          <SidebarItem
+            title={"Experience"}
+            icon={<WorkIcon className="experienceIcon" fontSize={"large"} />}
+          />
+          <SidebarItem
+            title={"Education"}
+            icon={<SchoolIcon className="educationIcon" fontSize={"large"} />}
+          />
+          <SidebarItem
+            title={"Contact"}
+            icon={<EmailIcon className="contactIcon" fontSize={"large"} />}
+          />
         </List>
       </div>
     </Drawer>
   );
-};
+}
 
 export default Sidebar;
