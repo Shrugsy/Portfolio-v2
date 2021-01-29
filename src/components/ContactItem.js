@@ -2,6 +2,7 @@ import React from "react";
 import { node, string } from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   contactLine: {
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     height: "60px",
     width: "60px",
     background: "#282828",
+    color: "#BDBDBD",
     borderRadius: "50%",
     boxShadow: "2px 2px 8px black",
     marginRight: "10px",
@@ -57,7 +59,7 @@ export default function ContactItem({ icon, title, href, content }) {
   const classes = useStyles();
   return (
     <p className={classes.contactLine}>
-      <span className={classes.circle}>{icon}</span>
+      <Button className={classes.circle} href={href}>{icon}</Button>
       {title}:
       <a className={classes.links} href={href}>
         {content}

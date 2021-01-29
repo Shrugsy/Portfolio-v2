@@ -9,17 +9,26 @@ import ProjectActions from "./ProjectActions";
 
 const useStyles = makeStyles({
   card: {
-    //   maxWidth: 345,
+    height: 450,
     minWidth: 300,
     background: "#282828",
     color: "rgb(175, 175, 175)",
     boxShadow: "2px 2px 8px black",
+    display: "flex",
+    flexDirection: "column",
   },
   media: {
     height: 200,
     objectFit: "cover",
     color: "rgb(175, 175, 175)",
   },
+  cardActionArea: {
+    flexGrow: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "flex-start"
+  }
 });
 
 ProjectCard.propTypes = {
@@ -44,7 +53,7 @@ export default function ProjectCard({
   const classes = useStyles();
   return (
     <Card className={classes.card}>
-      <CardActionArea onClick={handleClickOpen}>
+      <CardActionArea className={classes.cardActionArea} onClick={handleClickOpen}>
         <CardMedia
           component="img"
           className={classes.media}

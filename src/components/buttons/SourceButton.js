@@ -14,7 +14,6 @@ export default function SourceButton({ linkSource }) {
       href={linkSource}
       variant="contained"
       size="small"
-      color="secondary"
       startIcon={<GitHubIcon />}
     >
       View Source
