@@ -8,8 +8,8 @@ import ReactIcon from "../images/icons/react.svg";
 import NodeIcon from "../images/icons/nodejs-1.svg";
 import HTMLIcon from "../images/icons/html-5.svg";
 import CSSIcon from "../images/icons/css-3.svg";
+import TSIcon from "../images/icons/typescript.svg";
 import JSIcon from "../images/icons/javascript.svg";
-import BootstrapIcon from "../images/icons/bootstrap-4.svg";
 import MaterialUIIcon from "../images/icons/material-ui.svg";
 
 const styles = theme => ({
@@ -82,7 +82,7 @@ class Skills extends Component {
                   <img src={JSIcon} alt="Javascript" />
                 </Grid>
                 <Grid item xs={4} sm={4} md={2} lg={1}>
-                  <img src={BootstrapIcon} alt="Bootstrap" />
+                  <img src={TSIcon} alt="Typescript" />
                 </Grid>
                 <Grid item xs={4} sm={4} md={2} lg={1}>
                   <img src={MaterialUIIcon} alt="Material UI" />
@@ -103,6 +103,7 @@ class Skills extends Component {
                 <li>Vue</li>
                 <li>HTML 5</li>
                 <li>CSS 3</li>
+                <li>Typescript</li>
                 <li>Vanilla Javascript</li>
                 <li>jQuery</li>
                 <li>Bootstrap</li>

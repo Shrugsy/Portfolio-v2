@@ -134,7 +134,7 @@ code {
   height: 100%;
   position: absolute;
   background-size: cover;
-  background-image: url("./images/desk1.jpg");
+  background-image: url("./images/desk_compressed.jpg");
   background-repeat: no-repeat;
   overflow: hidden;
   z-index: -1;

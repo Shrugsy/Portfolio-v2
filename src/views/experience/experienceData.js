@@ -43,7 +43,7 @@ export const experienceData = [
       "Level 3 design/engineering for Supply Authority Networks (Endeavour Energy, Essential Energy)",
       "Project Management",
       "Auditing and inspection of peer designs",
-      "Overseeing & co-ordinating multiple simultaneous projects",
+      "Overseeing & coordinating multiple simultaneous projects",
       "Adherence to work requirements, Supply Authority standards & Electrical Standards",
       "Application of continuous improvement principles to the design process",
     ],
@@ -59,7 +59,7 @@ export const experienceData = [
     description: "Nation wide supermarket chain",
     tasks: [
       "Supervision of fellow staff members",
-      "Serving customers as well as dealing with customer queries & complains",
+      "Serving customers as well as dealing with customer queries & complaints",
       "Frequent handling of large sums of cash",
     ],
     durationFrom: "2006",

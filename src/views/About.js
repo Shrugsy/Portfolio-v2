@@ -8,7 +8,7 @@ export default function About() {
       <div className="container content">
         <p>
           I am a Full Stack Web Developer currently residing in Wollongong, NSW.
-          I have experience working with React, Redux, HTML, Javascript and CSS
+          I have experience working with React, Redux, HTML, Typescript, Javascript and CSS
           among others.
         </p>
         <p>
