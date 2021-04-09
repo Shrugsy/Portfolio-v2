@@ -1,5 +1,4 @@
 import pldLogo from "../../images/Logos/pld_logo.png";
-import woolworthsLogo from "../../images/Logos/woolworths-5.svg";
 import qpsLogo from "../../images/Logos/qps_benchmarking.png";
 
 export const experienceData = [
@@ -50,21 +49,6 @@ export const experienceData = [
     durationFrom: "Mar 2017",
     durationTo: "Oct 2019",
     location: "Mittagong, NSW",
-  },
-  {
-    link: "https://www.woolworths.com.au/",
-    logo: woolworthsLogo,
-    company: "Woolworths",
-    role: "Service Cashier",
-    description: "Nation wide supermarket chain",
-    tasks: [
-      "Supervision of fellow staff members",
-      "Serving customers as well as dealing with customer queries & complaints",
-      "Frequent handling of large sums of cash",
-    ],
-    durationFrom: "2006",
-    durationTo: "2017",
-    location: "Wagga Wagga & Wollongong",
   },
 ];
 
